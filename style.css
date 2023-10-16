@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+body {
+  background: #333;
+}
+
+header {
+  background: black;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+header h1 {
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+header h1 a:hover {
+  opacity: 0.7;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header nav a {
+  line-height: 40px;
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+}
+header nav li {
+  color: white;
+  transition: 0.5s;
+}
+header nav .red:hover {
+  color: red;
+}
+header nav .blue:hover {
+  color: blue;
+}
+header nav .green:hover {
+  color: lightgreen;
+}
+header nav .yellow:hover {
+  color: yellow;
+}
+
+main .contents {
+  width: 100%;
+  margin-top: 256px;
+  position: relative;
+}
+main .contents .contentsImage {
+  width: 65%;
+  border-radius: 8px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+main .contents:nth-child(even) .contentsImage {
+  margin-left: auto;
+}
+main .contents .contentsText {
+  position: absolute;
+  top: 16px;
+  width: 50%;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 1s;
+  z-index: 5;
+}
+main .contents .contentsText h2 {
+  background: rgba(20, 20, 20, 0.8);
+  padding: 8px;
+  color: white;
+}
+main .contents .contentsText p {
+  color: white;
+  background: rgba(20, 20, 20, 0.8);
+  font-size: 14px;
+  padding: 4px 0 4px 16px;
+  margin-top: 8px;
+  width: 60%;
+}
+main .contents:nth-child(odd) .contentsText {
+  transform: translateX(50px);
+  right: 0px;
+}
+main .contents:nth-child(odd) .contentsText p {
+  margin-left: auto;
+}
+main .contents.show .contentsImage,
+main .contents.show .contentsText {
+  opacity: 1;
+  transform: none;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background: black;
+  margin-top: 256px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}

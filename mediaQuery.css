@@ -1,0 +1,30 @@
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 24px;
+  }
+  main .contents {
+    margin-top: 128px;
+  }
+  main .contents .contentsImage {
+    width: 100%;
+    margin-top: 8px;
+  }
+  main .contents .contentsText {
+    width: 100%;
+    position: static;
+    background: rgba(20, 20, 20, 0.8);
+    text-align: center;
+    border-radius: 8px;
+  }
+  main .contents .contentsText h2 {
+    width: 100%;
+    background: none;
+    padding: 0;
+  }
+  main .contents .contentsText p {
+    width: 100%;
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}
